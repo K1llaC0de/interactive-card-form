@@ -1,0 +1,73 @@
+@font-face {
+  font-family: "SpaceGrotesk";
+  font-style: normal;
+  font-weight: 300;
+  src: url("/fonts/static/SpaceGrotesk-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "SpaceGrotesk";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/static/SpaceGrotesk-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "SpaceGrotesk";
+  font-style: normal;
+  font-weight: 500;
+  src: url("/fonts/static/SpaceGrotesk-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "SpaceGrotesk";
+  font-style: normal;
+  font-weight: 600;
+  src: url("/fonts/static/SpaceGrotesk-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "SpaceGrotesk";
+  font-style: normal;
+  font-weight: 700;
+  src: url("/fonts/static/SpaceGrotesk-Bold.ttf") format("truetype");
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: rgb(243, 198, 226);
+
+  .panel {
+    display: flex;
+    flex-direction: row;
+
+    .left-panel {
+      position: relative;
+
+      .card-back,
+      .card-front {
+        position: absolute;
+      }
+
+      .card-back {
+        top: 55%;
+        right: -300px;
+      }
+
+      .card-front {
+        top: 20%;
+        right: -200px;
+      }
+    }
+  }
+
+  .panel-white {
+    height: 100%;
+    width: 1200px;
+    background-color: white;
+    margin-left: 0;
+  }
+}
