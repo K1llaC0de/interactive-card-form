@@ -94,17 +94,27 @@
     font-family: "SpaceGrotesk";
     font-style: normal;
     font-weight: 600;
-    color: #333;
+    font-size: 14px;
+    color: #21092f;
     margin-bottom: 5px;
     display: block;
   }
 
   .form-group input {
-    width: 70%;
+    width: 73%;
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 8px;
-    font-size: 18px;
+    font-size: 16px;
+    font-family: "SpaceGrotesk";
+    font-style: normal;
+    font-weight: 400;
+  }
+
+  input::placeholder {
+    color: #a9a9a9;
+    opacity: 1;
+    padding-left: 2px;
   }
 
   .small-inputs {
@@ -116,13 +126,14 @@
   .exp-cvc-header {
     display: flex;
     justify-content: flex-start;
-    gap: 200px;
+    gap: 55px;
   }
 
   .exp-cvc-header label {
     font-family: 'SpaceGrotesk', sans-serif;
-    font-weight: 500;
+    font-weight: 600;
     margin-bottom: 4px;
+    font-size: 14px;
   }
 
   .exp-cvc-row {
@@ -137,12 +148,12 @@
 
   .input-mm,
   .input-yy {
-    width: 40px;
+    width: 55px !important;
     padding: 6px;
     border: 1px solid #ddd;
     border-radius: 5px;
     font-size: 12px;
-    text-align: center;
+    text-align: left;
   }
 
   .cvc {
@@ -152,27 +163,47 @@
   }
 
   .input-cvc {
-    width: 50px;
+    width: 188px !important;
     padding: 6px;
     border: 1px solid #ddd;
     border-radius: 5px;
     font-size: 12px;
-    text-align: center;
+    text-align: left;
   }
 
-  .confirm-btn {
-    width: 100%;
-    padding: 10px;
-    background-color: #21092f;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
+  ::ng-deep .confirm-btn {
     margin-top: 20px;
+    display: block;
+
+    .p-button {
+      font-family: "SpaceGrotesk";
+      font-style: normal;
+      font-weight: 400;
+      border-radius: 8px;
+      font-size: 16px;
+      padding: 10px;
+      background-color: #21092f !important;
+      color: white;
+      border: none;
+    }
+
+    .p-button .button {
+      width: 50px;
+    }
+
+    .confirm-btn:hover {
+      background-color: #3e2a5e !important;
+    }
   }
 
-  .confirm-btn:hover {
-    background-color: #3e2a5e;
+  ::ng-deep .confirm-btn .p-button[disabled] {
+    background-color: hsl(0, 0%, 80%) !important;
+    cursor: not-allowed;
+  }
+
+  .error {
+    color: hsl(0, 100%, 66%);
+    font-size: 0.8rem;
+    margin-top: 0.25rem;
   }
 }
