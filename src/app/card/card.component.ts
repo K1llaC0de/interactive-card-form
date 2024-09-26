@@ -23,13 +23,13 @@ export class CardComponent {
   cardForm: FormGroup;
   submitted: boolean = false;
 
-  constructor(private formBuilder: FormBuilder) {
-    this.cardForm = new FormGroup({});
-  }
-
-  ngOnInit(): void {
-    this.cardForm = this.formBuilder.group({
-      cardName: ['', Validators.required]
+  constructor(private fb: FormBuilder) {
+    this.cardForm = this.fb.group({
+      cardName: ['', Validators.required],
+      cardNumber: ['', [Validators.required, Validators.pattern(/^\d{4}\s\d{4}\s\d{4}\s\d{4}$/)]],
+      month: ['', [Validators.required, Validators.pattern(/^(0[1-9]|1[0-2])$/)]], 
+      year: ['', [Validators.required, Validators.pattern(/^\d{2}$/)]],
+      cvc: ['', [Validators.required, Validators.pattern(/^\d{3}$/)]] 
     });
   }
 
