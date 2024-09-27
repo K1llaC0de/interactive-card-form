@@ -23,6 +23,13 @@ export class CardComponent {
   cardForm: FormGroup;
   submitted: boolean = false;
 
+  // default values
+  cardName = 'JANE APPLESEED';
+  cardNumber = '0000 0000 0000 0000';
+  cardMonth = '00';
+  cardYear = '00';
+  cardCVC = '000';
+
   constructor(private fb: FormBuilder) {
     this.cardForm = this.fb.group({
       cardName: ['', Validators.required],
@@ -31,10 +38,21 @@ export class CardComponent {
       year: ['', [Validators.required, Validators.pattern(/^\d{2}$/)]],
       cvc: ['', [Validators.required, Validators.pattern(/^\d{3}$/)]] 
     });
+    
+    this.onChanges();
+  }
+
+  onChanges(): void {
+    this.cardForm.valueChanges.subscribe((val) => {
+      this.cardName = val.cardName ? val.cardName.toUpperCase() : 'JANE APPLESEED';
+      this.cardNumber = val.cardNumber || '0000 0000 0000 0000';
+      this.cardMonth = val.month || '00';
+      this.cardYear = val.year || '00';
+      this.cardCVC = val.cvc || '000';
+    });
   }
 
   onSubmit() {
-    //this.cardForm.markAllAsTouched();
     if (this.cardForm.valid) {
       this.submitted = true;
       console.log('Form submitted:', this.cardForm.value);
@@ -43,7 +61,7 @@ export class CardComponent {
 
   resetForm() {
     this.submitted = false;
-    this.cardForm.reset(); // Resetea el formulario y vuelve a la vista del formulario
+    this.cardForm.reset();
   }
 
 }

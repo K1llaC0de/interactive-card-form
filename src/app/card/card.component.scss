@@ -197,13 +197,20 @@
   }
 
   .success-container {
-    display: flex; /* Activa Flexbox */
-    flex-direction: column; /* Coloca los elementos en columna */
-    align-items: center; /* Centra los elementos horizontalmente */
-    justify-content: center; /* Centra los elementos verticalmente */
-    height: 100%; /* Ajusta la altura según el diseño, por ejemplo: 100vh si deseas ocupar toda la ventana */
-    text-align: center; /* Centra el texto */
-    padding: 20px; /* Espacio interno */
+    display: flex;
+    /* Activa Flexbox */
+    flex-direction: column;
+    /* Coloca los elementos en columna */
+    align-items: center;
+    /* Centra los elementos horizontalmente */
+    justify-content: center;
+    /* Centra los elementos verticalmente */
+    height: 100%;
+    /* Ajusta la altura según el diseño, por ejemplo: 100vh si deseas ocupar toda la ventana */
+    text-align: center;
+    /* Centra el texto */
+    padding: 20px;
+    /* Espacio interno */
   }
 
   h2 {
@@ -244,5 +251,82 @@
 
   .success-icon {
     margin-bottom: 10px;
+  }
+
+  .card-front {
+    position: relative;
+    width: 450px;
+    height: auto;
+  }
+
+  .card-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .card-logo {
+    position: absolute;
+    top: 25px;
+    left: 10px;
+    margin-left: 20px;
+  }
+
+  .card-details {
+    position: absolute;
+    bottom: 30px;
+    left: 20px;
+    color: white;
+    font-family: "SpaceGrotesk";
+    font-style: normal;
+    font-weight: 400;
+  }
+
+  .card-number {
+    font-size: 30px;
+    margin-bottom: 30px;
+    margin-left: 15px;
+    letter-spacing: 2px;
+  }
+
+  .card-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .card-name {
+    font-size: 14px;
+    flex: 1;
+    text-align: left;
+    letter-spacing: 2px;
+    margin-left: 15px;
+  }
+
+  .card-expiry {
+    display: flex;
+    gap: 5px;
+    font-size: 14px;
+    flex: 0;
+    letter-spacing: 2px;
+  }
+
+  .cvc-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    height: 100%;
+    padding: 20px 20px 0 0;
+  }
+
+  .card-cvc {
+    position: absolute;
+    top: 110px;
+    margin-right: 40px;
+    color: white;
+    font-family: "SpaceGrotesk";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 2px;
   }
 }

@@ -1,22 +1,42 @@
 <div class="card-container">
   <div class="panel">
     <div class="panel panel-white">
+
       <div class="left-panel">
         <img src="/bg-main-desktop.png" width="450px" height="100%" />
-        <img src="/cardBack.png" class="card-back" />
-        <img src="/cardFront.png" class="card-front" />
+        <div class="card-back">
+          <img src="/cardBack.png" class="card-image" alt="Card Back">
+          <div class="cvc-container" *ngIf="submitted || !submitted">
+            <div class="card-cvc" id="cardCvcDisplay">{{ cardCVC }}</div>
+          </div>
+        </div>
+
+        <div class="card-front" *ngIf="submitted || !submitted">
+          <img src="/cardFront.png" class="card-image" alt="Card Front">
+          <img src="/card-logo.svg" class="card-logo" alt="Card Logo">
+          <div class="card-details">
+            <div class="card-number" id="cardNumberDisplay">{{ cardNumber }}</div>
+            <div class="card-bottom">
+              <div class="card-name" id="cardNameDisplay">{{ cardName }}</div>
+              <div class="card-expiry">
+                <span id="cardMonthDisplay">{{ cardMonth }}</span>/<span id="cardYearDisplay">{{ cardYear }}</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+
       <div class="right-section">
         <form *ngIf="!submitted" class="card-form" [formGroup]="cardForm">
           <div class="form-group">
             <label for="cardholder-name">CARDHOLDER NAME</label>
             <input type="text" id="cardholder-name" placeholder="e.g. Jane Appleseed" formControlName="cardName"
-            [ngStyle]="cardForm.get('cardName')?.invalid && cardForm.get('cardName')?.touched ? {'border': '1px solid hsl(0, 100%, 66%)'} : {}">
+              [ngStyle]="cardForm.get('cardName')?.invalid && cardForm.get('cardName')?.touched ? {'border': '1px solid hsl(0, 100%, 66%)'} : {}">
           </div>
           <div class="form-group">
             <label for="card-number">CARD NUMBER</label>
             <input type="text" id="card-number" placeholder="e.g. 1234 5678 9123 0000" formControlName="cardNumber"
-            [ngStyle]="cardForm.get('cardNumber')?.invalid && cardForm.get('cardNumber')?.touched ? {'border': '1px solid hsl(0, 100%, 66%)'} : {}">
+              [ngStyle]="cardForm.get('cardNumber')?.invalid && cardForm.get('cardNumber')?.touched ? {'border': '1px solid hsl(0, 100%, 66%)'} : {}">
           </div>
           <div class="form-group small-inputs">
             <div class="exp-cvc-header">
@@ -26,13 +46,13 @@
             <div class="exp-cvc-row">
               <div class="exp-date">
                 <input type="text" placeholder="MM" class="input-mm" formControlName="month"
-                [ngStyle]="cardForm.get('month')?.invalid && cardForm.get('month')?.touched ? {'border': '1px solid hsl(0, 100%, 66%)'} : {}">
+                  [ngStyle]="cardForm.get('month')?.invalid && cardForm.get('month')?.touched ? {'border': '1px solid hsl(0, 100%, 66%)'} : {}">
                 <input type="text" placeholder="YY" class="input-yy" formControlName="year"
-                [ngStyle]="cardForm.get('year')?.invalid && cardForm.get('year')?.touched ? {'border': '1px solid hsl(0, 100%, 66%)'} : {}">
+                  [ngStyle]="cardForm.get('year')?.invalid && cardForm.get('year')?.touched ? {'border': '1px solid hsl(0, 100%, 66%)'} : {}">
               </div>
               <div class="cvc">
                 <input type="text" placeholder="e.g. 123" class="input-cvc" formControlName="cvc"
-                [ngStyle]="cardForm.get('cvc')?.invalid && cardForm.get('cvc')?.touched ? {'border': '1px solid hsl(0, 100%, 66%)'} : {}">
+                  [ngStyle]="cardForm.get('cvc')?.invalid && cardForm.get('cvc')?.touched ? {'border': '1px solid hsl(0, 100%, 66%)'} : {}">
               </div>
             </div>
           </div>
