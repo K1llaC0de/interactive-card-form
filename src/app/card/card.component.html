@@ -7,7 +7,7 @@
         <img src="/cardFront.png" class="card-front" />
       </div>
       <div class="right-section">
-        <form class="card-form" [formGroup]="cardForm">
+        <form *ngIf="!submitted" class="card-form" [formGroup]="cardForm">
           <div class="form-group">
             <label for="cardholder-name">CARDHOLDER NAME</label>
             <input type="text" id="cardholder-name" placeholder="e.g. Jane Appleseed" formControlName="cardName"
@@ -38,6 +38,12 @@
           </div>
           <p-button label="Confirm" class="confirm-btn" [disabled]="!cardForm.valid" (click)="onSubmit()"></p-button>
         </form>
+        <div *ngIf="submitted" class="success-container">
+          <img src="/icon-complete.svg" alt="Success Icon" class="success-icon" />
+          <h2>THANK YOU!</h2>
+          <p class="success-text">We've added your card details</p>
+          <p-button label="Continue" class="continue-btn" (click)="resetForm()"></p-button>
+        </div>
       </div>
     </div>
   </div>

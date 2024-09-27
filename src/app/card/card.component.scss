@@ -195,4 +195,54 @@
     background-color: hsl(0, 0%, 80%) !important;
     cursor: not-allowed;
   }
+
+  .success-container {
+    display: flex; /* Activa Flexbox */
+    flex-direction: column; /* Coloca los elementos en columna */
+    align-items: center; /* Centra los elementos horizontalmente */
+    justify-content: center; /* Centra los elementos verticalmente */
+    height: 100%; /* Ajusta la altura según el diseño, por ejemplo: 100vh si deseas ocupar toda la ventana */
+    text-align: center; /* Centra el texto */
+    padding: 20px; /* Espacio interno */
+  }
+
+  h2 {
+    font-family: "SpaceGrotesk";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    color: #21092f;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+  }
+
+  .success-text {
+    font-size: 16px;
+    font-family: "SpaceGrotesk";
+    font-style: normal;
+    font-weight: 400;
+    color: #a9a9a9;
+    margin-top: 0;
+    margin-bottom: 15px;
+  }
+
+  ::ng-deep .continue-btn .p-button {
+    width: 387px !important;
+    margin-top: 20px !important;
+    display: block !important;
+    font-family: "SpaceGrotesk" !important;
+    font-style: normal !important;
+    font-weight: 400 !important;
+    border-radius: 8px !important;
+    font-size: 16px !important;
+    padding: 10px !important;
+    background-color: #21092f !important;
+    color: white !important;
+    border: none !important;
+    cursor: pointer !important;
+  }
+
+  .success-icon {
+    margin-bottom: 10px;
+  }
 }

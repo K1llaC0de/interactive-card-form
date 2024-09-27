@@ -34,11 +34,16 @@ export class CardComponent {
   }
 
   onSubmit() {
-    this.cardForm.markAllAsTouched();
+    //this.cardForm.markAllAsTouched();
     if (this.cardForm.valid) {
       this.submitted = true;
       console.log('Form submitted:', this.cardForm.value);
     }
+  }
+
+  resetForm() {
+    this.submitted = false;
+    this.cardForm.reset(); // Resetea el formulario y vuelve a la vista del formulario
   }
 
 }
