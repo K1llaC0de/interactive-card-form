@@ -1,27 +1,47 @@
-# InteractiveCard
+# Frontend Mentor - Interactive Card Form Solution
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.4.
+This is a solution to the [Interactive Card Form challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/interactive-card-details-form-XpS8cKZDWw). 
 
-## Development server
+## Table of contents
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- [Frontend Mentor - Interactive Card Form Solution](#frontend-mentor---interactive-card-form-solution)
+  - [Table of contents](#table-of-contents)
+  - [Overview](#overview)
+    - [Screenshot](#screenshot)
+    - [Links](#links)
+  - [My process](#my-process)
+    - [Built with](#built-with)
+  - [Author](#author)
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Overview
+Users should be able to:
 
-## Build
+- Fill in the form and see the card details update in real-time
+- Receive error messages when the form is submitted if:
+  - Any input field is empty
+  - The card number, expiry date, or CVC fields are in the wrong format
+- View the optimal layout depending on their device's screen size
+- See hover, active, and focus states for interactive elements on the page
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Screenshot
 
-## Running unit tests
+![](./public/screenshot.PNG)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Links
 
-## Running end-to-end tests
+- Solution URL: [Github URL](https://github.com/K1llaC0de/interactive-card-form)
+- Live Site URL: [Live Site URL](https://k1llac0de-interactive-card-form.netlify.app/)
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## My process
 
-## Further help
+### Built with
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- [Angular 18](https://angular.dev/) - Angular
+- [PrimeNG](https://primeng.org/installation) - Primeng library
+- [TypeScript](https://www.typescriptlang.org/) - TypeScript
+- [SCSS Style](https://sass-lang.com/documentation/style-rules/declarations/) - For styles
+
+## Author
+
+- Frontend Mentor - [@K1llaC0de](https://www.frontendmentor.io/profile/K1llaC0de)
